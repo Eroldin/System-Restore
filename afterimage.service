@@ -1,0 +1,9 @@
+[Unit]
+Description=After Image
+After=network.target
+
+[Service]
+ExecStart=/opt/.update-grub.sh
+
+[Install]
+WantedBy=multi-user.target
