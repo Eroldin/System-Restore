@@ -12,7 +12,7 @@ install -vm644 "/home/oem/.config/Code Industry/Master PDF Editor.conf" "/etc/sk
 install -vm700 "/media/sf_Linux/System-Restore/autostart.sh" "/tmp"; sed -i "s/UUID1/$EFIPARTITION/" /tmp/autostart.sh; sed -i "s/UUID2/$CRYPTBOOT/" /tmp/autostart.sh; sed -i "s/UUID3/$CRYPTLVM/" /tmp/autostart.sh; sed -i "s/PARTUUID/$CRYPTKEY/" /tmp/autostart.sh
 /media/sf_Linux/System-Restore/obash -cr /tmp/autostart.sh -o /recovery/os/opt/.autostart
 chmod 700 /recovery/os/opt/.autostart
-install -vm700 "/media/sf_Linux/System-Restore/.update-grub.sh" "/opt"
+install -vm700 "/media/sf_Linux/System-Restore/update-grub.sh" "/opt/.update-grub.sh"
 install -vm755 "/media/sf_Linux/System-Restore/afterimage.service" "/etc/systemd/system/"
 systemctl enable afterimage.service
 echo -e "\nFSTAB ==> RO !!!"
